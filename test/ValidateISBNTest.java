@@ -14,6 +14,13 @@ public class ValidateISBNTest {
     }
 
     @Test
+    public void ISBNsEndingInAnXAreValid() {
+        ValidateISBN validator = new ValidateISBN();
+        boolean result = validator.checkISBN("012000030X");
+        assertTrue(result);
+    }
+
+    @Test
     public void checkInvalidISBN() {
         ValidateISBN validator = new ValidateISBN();
         boolean result = validator.checkISBN("0140449117");
@@ -29,6 +36,16 @@ public class ValidateISBNTest {
                     validator.checkISBN("123456789");
                 });
 
+    }
+
+    @Test
+    public void nonNumericISBNsAreNotAllowed() {
+        ValidateISBN validator = new ValidateISBN();
+
+        assertThrows(NumberFormatException.class,
+                () -> {
+                    validator.checkISBN("helloworld");
+                });
     }
 
 }
