@@ -12,6 +12,7 @@ The main purpose is to create an isbn number validating app with usage of TDD.
 ## Technologies
 Project is created with:
 * Java 11 
+* JUnit5  
   
 IDE: Intellij IDEA 2022.1  
 
