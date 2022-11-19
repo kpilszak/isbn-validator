@@ -13,6 +13,7 @@ The main purpose is to create an isbn number validating app with usage of TDD.
 Project is created with:
 * Java 11 
 * JUnit5  
+* Mockito  
   
 IDE: Intellij IDEA 2022.1  
 
